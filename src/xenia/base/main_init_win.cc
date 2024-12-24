@@ -19,12 +19,12 @@ class StartupCpuFeatureCheck {
   StartupCpuFeatureCheck() {
     Xbyak::util::Cpu cpu;
     const char* error_message = nullptr;
-    if (!cpu.has(Xbyak::util::Cpu::tAVX)) {
-      error_message =
-          "Your CPU does not support AVX, which is required by Xenia. See "
-          "the "
-          "FAQ for system requirements at https://xenia.jp";
-    }
+    // if (!cpu.has(Xbyak::util::Cpu::tAVX)) {
+    //   error_message =
+    //       "Your CPU does not support AVX, which is required by Xenia. See "
+    //       "the "
+    //       "FAQ for system requirements at https://xenia.jp";
+    // }
     if (error_message == nullptr) {
       return;
     } else {
